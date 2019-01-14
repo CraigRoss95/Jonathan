@@ -10,6 +10,11 @@ public float dodgeTime;
 public float cooldownTime;
 public GameObject playerModel;
 public Material dodgeingTexture;
+public GameObject movementBox;
+public float dodgeSpeed;
+
+
+private Vector2 input;
 private Material notDodgeingTexture;
 public GameObject animationTarget;
 private Animator animator;
@@ -24,8 +29,10 @@ private Animator animator;
 	
 	// Update is called once per frame
 	void Update () {
+
 		if (Input.GetButtonDown("dodge") && onCooldown == false && dodgeing == false && gameObject.GetComponent<playerHealth>().GetInvinsable() == false)
 		{	animator.Play("dodge");
+		input = movementBox.GetComponent<playerControler>().GetInput();
 			Dodge();
 		}
 		if(dodgeing == false)
@@ -47,6 +54,7 @@ void Dodge()
 		dodgeing = true;
 		playerModel.GetComponent<Renderer>().material = dodgeingTexture;
 		gameObject.GetComponent<BoxCollider>().enabled = false;
+		movementBox.transform.localPosition = new Vector3 (movementBox.transform.localPosition.x + input.x * dodgeSpeed, movementBox.transform.localPosition.y  + input.y * dodgeSpeed, movementBox.transform.localPosition.z);
 		Invoke("UnDodge", dodgeTime);
 	}
 void UnDodge()

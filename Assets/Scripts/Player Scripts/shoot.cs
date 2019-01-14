@@ -68,7 +68,7 @@ public class shoot : MonoBehaviour {
 		}
 		transform.LookAt(cursor);
 
-		if(onCooldown == false && Input.GetButton("Fire1"))
+		if(onCooldown == false && Input.GetButton("Fire1") && gameObject.GetComponent<melee>().IsMeleeing() == false)
 		{
 			audioSource.PlayOneShot(shootSounds[Random.Range(0, shootSounds.Length)], 2.0f);
 			float rand = Random.Range((-1 * acuracyDebuff), acuracyDebuff)/ 100.0f;

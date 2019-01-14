@@ -854,6 +854,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 431567738}
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!1 &1919263327 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1966333483720652, guid: cc17d52a430599a49b6e591637bb8be2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1962349802}
 --- !u!1 &1958175245 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1792472008453618, guid: 9d91b73a9648a46409799a163cd473e1,
@@ -927,6 +932,16 @@ Prefab:
         type: 2}
       propertyPath: dodgeTime
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114185032129993580, guid: cc17d52a430599a49b6e591637bb8be2,
+        type: 2}
+      propertyPath: movementBox
+      value: 
+      objectReference: {fileID: 1919263327}
+    - target: {fileID: 114185032129993580, guid: cc17d52a430599a49b6e591637bb8be2,
+        type: 2}
+      propertyPath: dodgeSpeed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc17d52a430599a49b6e591637bb8be2, type: 2}

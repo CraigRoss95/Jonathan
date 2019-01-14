@@ -25,7 +25,7 @@ public class playerControler : MonoBehaviour {
 	void Update()
 	{
 		FindIsGrounded();
-		GetInput();
+		SetInput();
 		Jump();
 		Debug.Log("flying = " + flying);
 		if (flying == false && isGrounded == false)
@@ -60,7 +60,7 @@ public class playerControler : MonoBehaviour {
 	}
 
 	//sets input for every update
-	void GetInput()
+	void SetInput()
 	{
 		input.x = Input.GetAxisRaw("Horizontal");
 		input.y = Input.GetAxisRaw("Vertical");
@@ -138,6 +138,9 @@ public class playerControler : MonoBehaviour {
 		{
 			gameObject.GetComponent<Rigidbody>().AddForce(Vector3.down* extraGravity);
 		}
+	}
+	public Vector2 GetInput(){
+		return input;
 	}
 	
 }

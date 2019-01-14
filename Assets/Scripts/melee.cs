@@ -58,4 +58,7 @@ public GameObject slashSprite;
 	{
 		onCooldown = false;
 	}
+	public bool IsMeleeing(){
+		return meleeing;
+	}
 }
