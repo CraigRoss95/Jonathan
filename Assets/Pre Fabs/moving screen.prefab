@@ -4016,6 +4016,7 @@ Transform:
   - {fileID: 4992788270843522}
   - {fileID: 4429238744432404}
   - {fileID: 4469737818139328}
+  - {fileID: 4795302054400838}
   m_Father: {fileID: 4584655143150282}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -4025,12 +4026,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1366246996996572}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.3, z: 1}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -0.33100033, z: 0}
+  m_LocalScale: {x: 1, y: 0.3, z: 1}
   m_Children: []
-  m_Father: {fileID: 4864547624817468}
-  m_RootOrder: 0
+  m_Father: {fileID: 4782759124425804}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4796065289557158
 Transform:
@@ -4203,8 +4204,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -7.6178293, z: -0.000000027939677}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4795302054400838}
+  m_Children: []
   m_Father: {fileID: 4584655143150282}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8759,7 +8759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e51d0d8325ae6a040a3c0555979ce348, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 0
 --- !u!114 &114016601752764002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8820,6 +8820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78f3c93f11d897e48bb63f8124a21c6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1966333483720652}
 --- !u!114 &114113812298923314
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8859,10 +8860,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f83c3ffb1555d5745b80303e588fa8d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dodgeTime: 0.25
+  dodgeTime: 0.5
   cooldownTime: 1
   playerModel: {fileID: 1114504726877840}
   dodgeingTexture: {fileID: 2100000, guid: 9efddeb42e9f17949b78111bf14870e2, type: 2}
+  movementBox: {fileID: 1966333483720652}
+  dodgeSpeed: 5
   animationTarget: {fileID: 1564909916636592}
 --- !u!114 &114185757843010288
 MonoBehaviour:
@@ -9157,7 +9160,7 @@ MonoBehaviour:
   minAndMaxY: 7
   ground:
     serializedVersion: 2
-    m_Bits: 8192
+    m_Bits: 0
   height: 1.7
   extraGravity: 20
   jumpingFource: 20
