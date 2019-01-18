@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class touchingGround : MonoBehaviour {
-
+	public GameObject player;
 	private bool touching;
 
 	// Use this for initialization
@@ -20,6 +20,7 @@ public class touchingGround : MonoBehaviour {
 		if (thing.transform.tag == "ground")
 		{
 			touching = true;
+			player.GetComponent<playerControler>().Ground();
 		}
 	}	void OnTriggerStay( Collider thing)
 	{

@@ -41,6 +41,10 @@ public class playerControler : MonoBehaviour {
 		}
 		ExtraGravity();
 	}
+	public void Ground(){
+		isGrounded = true;
+		flying = false;
+	}
 
 	public bool GetIsGrounded()
 	{
